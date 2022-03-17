@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <audio src="music\1.mp3"  autoplay="autoplay" loop="-1" ></audio>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>木鱼湖湿地公园</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">木鱼湖湿地公园</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">综述</a></li>
+                <li><a href="#summary-container">简述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">相关 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">木鱼湖</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">千纸鹤</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">台阶广场</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-opera">鱼跃广场</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-ie">空中廊桥</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/chrome-big.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>木鱼湖公园</h1>
+
+                    <p>这儿的湖虽然没有桂林的碧蓝明净，也没有西湖的清澈碧透。但我一眼看见它就有一种说不出的兴奋</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="https://baike.sogou.com/v138691543.htm?fromTitle=木鱼湖湿地公园"
+                          role="button" target="_blank">点我了解</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/firefox-big.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>千纸鹤平台</h1>
+
+                    <p>千纸鹤 故事还温热 再写 缘分还是倾斜</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="https://y.qq.com/portal/player.html" target="_blank"
+                          role="button">点我收听</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/safari-big.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>台阶广场</h1>
+
+                    <p>我在河的对岸观望我的青春，看的平静而伤感</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.kugou.com/song/gic4sef.html?from_sogou#hash=330FE9563F65EE08F40C597AAFED43C7&album_id=0" target="_blank"
+                          role="button">点我收听</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/opera-big.jpg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>鱼跃广场</h1>
+
+                    <p>美丽是平凡的，平凡得让你感觉不到她的存在</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.kugou.com/song/#hash=DB723AF325CC1BDB39C8FF177C45443B&album_id=2952169" target="_blank"
+                          role="button">点我收听</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/ie-big.jpg" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>空中廊桥</h1>
+
+                    <p>有些誓言垂垂老去，有些青春在文字里风雨飘摇</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.kugou.com/song/#hash=4F76587A5B0B93EEF15883E54DD3E2DB&album_id=2900867" target="_blank"
+                          role="button">点我收听</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/chrome-logo-small.jpg" alt="chrome">
+
+            <h2>木</h2>
+
+            <p>木者,春生之性。农之本也</p>
+
+            <p><a class="btn btn-default" href="http://tool.liuxue86.com/zi_view_9bba9343ac9bba93/"target="_blank" role="button">点我了解</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/firefox-logo-small.jpg" alt="firefox">
+
+            <h2>鱼</h2>
+
+            <p>鱼,水虫也。象形。鱼尾与燕尾相似</p>
+
+            <p><a class="btn btn-default" href="http://tool.liuxue86.com/zi_view_9bd5c843ac9bd5c8/"target="_blank" role="button">点我了解</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/safari-logo-small.jpg" alt="safari">
+
+            <h2>湖</h2>
+
+            <p>湖,大陂也</p>
+
+            <p><a class="btn btn-default" href="http://tool.liuxue86.com/zi_view_9b80cf43ac9b80cf/"target="_blank" role="button">点我了解</a></p>
+        </div>
+    </div>
+
+    <!-- 特性 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">木鱼湖</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">千纸鹤</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">台阶广场</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">鱼跃广场</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">空中廊桥</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">木鱼湖全景 <span
+                            class="text-muted">临湘江 滨湖工</span></h2>
+
+                    <p class="lead">
+                        木鱼湖没有风景
+                        <p>只有一圈静静的杨柳</p>
+                        <p>风起时，它们的枝条轻轻的摆着</p>
+                        <p>努力想要触碰到那一泓碧绿的湖水</p>
+                </div>
+                <div class="col-md-5">
+                    <video width="320" height="360" controls="controls">
+  <source src="video\001.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row feature">
+                <div class="col-md-5">
+                     <video width="360" height="360" controls="controls">
+  <source src="video\002.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">千纸鹤 <span class="text-muted">千纸鹤 千颗心</span>
+                    </h2>
+
+                    <p class="lead">云终于盛不下满眶的泪水
+                    <p>啪嗒啪嗒地掉起眼泪来</p>
+                <p>冰冷而苦涩的泪水打在了一只身首异处的千纸鹤上</p>
+                <p>它也哭了</p></p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-safari">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">台阶 <span class="text-muted">苔痕上阶绿 草色入帘青</span></h2>
+
+                    <p class="lead">湖光秋月两相知
+                     <p>天阶夜色凉如水</p>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/safari-logo.jpg"
+                         alt="Safari">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-opera">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <video width="360" height="360" controls="controls">
+  <source src="video\003.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">鱼跃广场<span class="text-muted">天高任鸟飞，海阔凭鱼跃</span>
+                    </h2>
+
+                    <p class="lead">谁道海阔凭鱼跃
+                        <p>几度花开彼岸天</p>
+                       <p>青梅落罢竹马去</p>
+                       <p>纵使相逢是流年</p></p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-ie">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">空中廊桥<span class="text-muted">画舫凌波,廊桥也</span></h2>
+
+                    <p class="lead">如果河是情 那么桥就是爱
+                        <p>穿花拂叶 遇河有桥</p></p>
+                </div>
+                <div class="col-md-5">
+                    <video width="360" height="360" controls="controls">
+  <source src="video\004.mp4" type="video/mp4" />
+Your browser does not support the video tag.
+</video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于木鱼湖</h4>
+                </div>
+                <div class="modal-body">
+                    <p>木鱼湖湿地公园由湘潭城发集团投资，湘潭市规划建筑设计院设计，湖南省第三建筑工程有限公司施工，为湘潭市绿道建设中第一个雨水公园，总用地面积为14.9公顷，其中建筑面积1.3公顷、绿化面积6.2公顷、广场道路面积2.2公顷、水体面积6.5公顷,总投资约2亿元，整个工程2015年年底竣工</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">已了解</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+
+        <p>&copy; Wuli慕工作室制</p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
